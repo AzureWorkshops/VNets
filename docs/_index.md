@@ -1,8 +1,8 @@
 <p class="lead">
-elevator pitch
+Build an enterprise-grade, secure virtual network in Microsoft Azure and monitor its performance.
 </p>
 <p>
-brief description (same as overview)
+In this workshop is intended to help users become familiar with networking in Microsoft Azure.  Participants will create some different virtual networks and examine various ways to manage and interact with those networks.  Users will also gain understanding around network security and performance.
 </p>
 
 <div class="row" style="height:250px;">
@@ -10,18 +10,23 @@ brief description (same as overview)
 
 #### What You Will Learn
 
-  * item 1
-  * item 2
-  * item 2
+  * VNets
+  * Gateways/VPNs
+  * CDNs
+  * Network Watcher
+  * User-Defined Routes (UDR)
+  * Network Security Groups (NSG)
+  * Virtual Appliances
 
 </div>
 <div class=col-third>
 
 #### Ideal Audience
 
-  * person 1
-  * person 2
-  * person 3
+  * CISOs and VPs of Information Security
+  * CIOs
+  * IT Managers
+  * Active Directory and Network Administrators
 
 </div>
 </div>
