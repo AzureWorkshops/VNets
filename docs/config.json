@@ -1,18 +1,43 @@
 {
-    "title": "VNets",
+    "title": "Virtual Networks",
     "tagline": "Azure Workshops",
+    "lead": "Build an enterprise-grade, secure virtual network in Microsoft Azure and monitor its performance.",
+    "description": "This workshop is intended to help users become familiar with networking in Microsoft Azure. Participants will create a virtual network and examine various ways to manage and interact with the network and its resources.",
+    "learn": [
+      "Virtual Networks",
+      "Resource Groups",
+      "Automation through ARM Templates",
+      "Managing NICs",
+      "Managing IP Addresses",
+      "Azure Event Logs"
+    ],
+    "audience": [
+      "CISOs and VPs of Information Security",
+      "CIOs",
+      "IT Managers",
+      "Active Directory and Network Administrators"
+    ],
     "author": "Joshua Davis",
     "timezone": "America/New_York",
     "format": "html",
+    "processor": "Processor",
     "html": {
-        "theme": "daux-blue",
-        "float": false,
-        "search": false,
-        "toggle_code": false,
-        "breadcrumbs": true,
-        "date_modified": true,
-        "twitter": [
-            "a11smiles"
-        ]
+      "theme": "azure-white",
+      "float": false,
+      "search": false,
+      "toggle_code": false,
+      "breadcrumbs": true,
+      "breadcrumb_separator": " / ",
+      "date_modified": true,
+      "twitter": [
+        "azureworkshops"
+      ],
+      "buttons": [
+        {
+          "name": "PowerPoint",
+          "icon": "fa-file-powerpoint-o",
+          "url": "https://github.com/AzureWorkshops/VNets/raw/master/AZW_Virtual_Networks.pptx"
+        }
+      ]
     }
-}
+  }
