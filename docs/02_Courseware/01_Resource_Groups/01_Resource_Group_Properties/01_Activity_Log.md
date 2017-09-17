@@ -1,5 +1,5 @@
 ## Overview
-Let's briefly explore how to query the history around our Resource Group.
+Let's take some time to explore how to query the history and events within our Resource Group.
 
 ## Activity Log
 Once you've created a Resource Group or you click on a Resource Group, the first tab **Overview** is selected.  Of course, there's no resources created yet.  We'll create some momentarily.  For now, in the left panel, click on **Activity log** <img src="https://raw.githubusercontent.com/AzureWorkshops/images/master/icons_activity_log.jpg" class="inline"/>.
