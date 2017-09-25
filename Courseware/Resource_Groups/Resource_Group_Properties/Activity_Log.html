@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Activity Log - Virtual Networks</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="description" content="Azure Workshops" />
+    <meta name="author" content="Joshua Davis">
+    <link rel="icon" href="" type="image/x-icon">
+    
+    <!-- Font -->
+    
+    <!-- CSS -->
+    <link href='../../../themes/azure/css/vs.css' rel='stylesheet' type='text/css'><link href='../../../themes/azure/css/theme.css' rel='stylesheet' type='text/css'><link href='../../../themes/azure/css/theme-white.min.css' rel='stylesheet' type='text/css'>
+</head>
+<body class="">
+
+        <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 col-md-offset-1">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">Azure Workshops</a>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <!--
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<div id="content-wrapper" class="container-fluid">
+    <div class="row hidden-print">
+        <div class="col-md-10 col-md-offset-1 breadcrumbs">
+            <a href="../../../index.html">Virtual Networks</a> / <a href="../../../Courseware/Exploring_Azure.html">Courseware</a> / <a href="../../../Courseware/Resource_Groups/Creating_a_Resource_Group.html">Resource Groups</a> / <a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Overview.html">Resource Group Properties</a> / <a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Activity_Log.html">Activity Log</a>        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 col-md-offset-1 hidden-print">
+            <div data-spy="affix" data-offset-top="100">
+                <!-- Navigation -->
+                <ul class='Nav'><li class='Nav__item '><a href="../../../Overview.html">Overview</a></li><li class='Nav__item  has-children'><a href="#" class="aj-nav folder"><i class="Nav__arrow">&nbsp;</i>Getting Started</a><ul class='Nav'><li class='Nav__item '><a href="../../../Getting_Started/Requirements.html">Requirements</a></li><li class='Nav__item '><a href="../../../Getting_Started/Office_365_and_Azure_Registration.html">Office 365 and Azure Registration</a></li><li class='Nav__item '><a href="../../../Getting_Started/Setup.html">Setup</a></li></ul></li><li class='Nav__item Nav__item--open has-children'><a href="#" class="aj-nav folder"><i class="Nav__arrow">&nbsp;</i>Courseware</a><ul class='Nav'><li class='Nav__item '><a href="../../../Courseware/Exploring_Azure.html">Exploring Azure</a></li><li class='Nav__item Nav__item--open has-children'><a href="#" class="aj-nav folder"><i class="Nav__arrow">&nbsp;</i>Resource Groups</a><ul class='Nav'><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Creating_a_Resource_Group.html">Creating a Resource Group</a></li><li class='Nav__item Nav__item--open has-children'><a href="#" class="aj-nav folder"><i class="Nav__arrow">&nbsp;</i>Resource Group Properties</a><ul class='Nav'><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Overview.html">Overview</a></li><li class='Nav__item Nav__item--active'><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Activity_Log.html">Activity Log</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Access_Control_(IAM).html">Access Control (IAM)</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Tags.html">Tags</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Resource_Costs.html">Resource Costs</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Deployments.html">Deployments</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Policies.html">Policies</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Automation_Script.html">Automation Script</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Metrics.html">Metrics</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Alert_Rules.html">Alert Rules</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Diagnostic_Logs.html">Diagnostic Logs</a></li></ul></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Providers.html">Resource Providers</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Adding_Resources.html">Adding Resources</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Managing_Resources.html">Managing Resources</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Automation.html">Automation</a></li></ul></li></ul></li></ul>
+                <div class="Links">
+                    
+                    <div class="pdf-link">
+                        <hr />
+                        <a href="../../../pdf/Virtual Networks.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> <span>Download PDF</span></a>
+                    </div>
+
+                                            <hr/>
+                        <div class="Twitter">
+                                                            <iframe allowtransparency="true" frameborder="0" scrolling="no" style="width:162px; height:20px;" src="https://platform.twitter.com/widgets/follow_button.html?screen_name=azureworkshops&amp;show_count=false"></iframe>
+                                <br />
+                                <br />
+                                                    </div>
+                                    </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <article class="Page">
+    <div class="pageHeader">
+        <h1>Activity Log</h1>
+                    <div class="date"> Monday, September 25, 2017 5:42 PM</div>
+            </div>
+    <div class="copy">
+        <h2 id="page_Overview">Overview</h2>
+<p>Let's take some time to explore how to query the history and events within our Resource Group.</p>
+<h2 id="page_Activity-Log">Activity Log</h2>
+<p>Once you've created a Resource Group or you click on a Resource Group, the first tab <strong>Overview</strong> is selected.  Of course, there's no resources created yet.  We'll create some momentarily.  For now, in the left panel, click on <strong>Activity log</strong> <img src="https://raw.githubusercontent.com/AzureWorkshops/images/master/icons_activity_log.jpg" class="inline"/>.</p>
+<p>The Activity Log gives you a report of all events within your Resource Group.  At the top of the query window, you'll see various options to customize your query.  Additionally, you can choose to save frequent search parameters.</p>
+<img src="../../../images/activity_logs.jpg" class="block"/>
+<p>There's, of course, not much to see here are this time. But, as we complete this workshop, you can revisit this blade periodically to see the changes to your Resource Group.</p>
+<h2 id="page_Exploring-the-Log">Exploring the Log</h2>
+<p>By default, the query looks at all events in the past 6 hours.  You should see an operation entitled <em>Update resource group</em> referring to the creation of the Resource Group.  If you don't see this event, try increasing the <strong>Timespan</strong> and click <strong>Apply</strong>.</p>
+<p>Once you see the event listed, go ahead and click on the first event, <strong>Update resource group</strong>.</p>
+<p>Clicking on the event will reveal an information window at the bottom of the screen.  The information window initially shows you the same basic information that the log table showed.  However, there are two other features exposed by this window.</p>
+<img src="../../../images/activity_logs_details.jpg" class="block"/>
+<h3 id="page_Log-Details">Log Details</h3>
+<p>Clicking on the <strong>JSON</strong> &quot;tab&quot; will display the details of the log entry in a JSON format.  Looking through this JSON object, you can find a vast amount of different information regarding the event.  Such information includes the action performed, the person performing the action, originating IP address, log level, resource type(s), resource location(s), and subscription Id.  All of this information can be used to create automated alerts in Azure.</p>
+<h3 id="page_Alerts">Alerts</h3>
+<p>The second feature of the details window enables you to create alerts around specific events. In the details window, clicking on <strong>Add activity log alert</strong> will open a new blade to create an alert.</p>
+<img src="../../../images/add_activity_alert.jpg" class="block"/>
+<p>Let's create an informational alert.</p>
+<p>In the alert blade, enter the following information:</p>
+<ol>
+<li>
+<p>Basics</p>
+<ul>
+<li>Activity log alert name: <strong>VNet Info Alert</strong>
+</li>
+<li>Description: <strong>Informational alert for resource group</strong>
+</li>
+<li>Subscription: <strong><em>&lt;choose your subscription&gt;</em></strong>
+</li>
+<li>Resource group: <strong><em>&lt;accept the default&gt;</em></strong> (this will create a new resource group for alerts)</li>
+</ul>
+</li>
+<li>
+<p>Source</p>
+<ul>
+<li>Input: <strong><em>&lt;Activity log&gt;</em></strong>
+</li>
+</ul>
+</li>
+<li>
+<p>Criteria</p>
+<ul>
+<li>Event category: <strong>Administrative</strong>
+</li>
+<li>Resource type: <strong>All</strong>
+</li>
+<li>Resource group: <strong><em>&lt;azworkshops_vnets_demo&gt;</em></strong>
+</li>
+<li>Resource: <strong>All</strong>
+</li>
+<li>Operation name: <strong>All</strong>
+</li>
+<li>Level: <strong>All</strong>
+</li>
+<li>Status: <strong>All</strong>
+</li>
+<li>Event initiated by: <strong><em>&lt;accept the default&gt;</em></strong>
+</li>
+</ul>
+</li>
+<li>
+<p>Alert via</p>
+<ul>
+<li>Action group: <strong>New</strong>
+</li>
+<li>Action group name: <strong>Information Alerts</strong>
+</li>
+<li>Short name: <strong>info</strong> (include the greater and less than signs)</li>
+</ul>
+</li>
+<li>
+<p>Actions<br />
+Here, add two actions - one for your email address and another for your mobile phone (SMS).</p>
+<p><strong>IMPORTANT:</strong> The <em>name of the receiver</em> must by <strong>unique</strong>.  Therefore, for your emaill address and SMS, name the receiver with a differentiator (e.g. &quot;John Doe - Email&quot;, &quot;John Doe - SMS&quot;).</p>
+<p>Notice that you can also specify a <em>Webhook</em> (URL) if you want to automate a notification or ticket in your support application, such as <em>ServiceNow</em>.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong>.</p>
+</li>
+</ol>
+<p>It should only take a couple of seconds to create the Resource Group (if necessary) and create/update the Action Group.  Once the process has completed you should receive a text (SMS) message and an email - provided that you set up both actions - alerting you that you've been added to the Action Group.</p>
+<h2 id="page_Powershell-CLI">Powershell/CLI</h2>
+<p>Before we move forward in looking at the other options of our Resource Group, let's interact with the Activity Logs just a bit more.  This time we'll query the logs using Powershell and/or the CLI.  As a reminder, most people use Powershell in a Windows environment and the CLI in Linux-based environment, but either can be used on any environment.</p>
+<p>Both of the following sections are the same.  Simply use the environment with which you feel most comfortable.</p>
+<h3 id="page_Powershell">Powershell</h3>
+<ol>
+<li>
+<p>From your prompt connect to Azure:</p>
+<pre><code class="language-ps">login-azurermaccount
+</code></pre>
+</li>
+<li>
+<p>Make sure you are &quot;attached&quot; to the correct subscription. If you only have one subscription, it will automatically be chosen for you.  However, if you have more than one subscription, then the incorrect one may have been chosen by default.</p>
+<ol>
+<li>
+<p>List all subscriptions:</p>
+<pre><code class="language-ps">get-azurermsubscription | select -Property SubscriptionName
+</code></pre>
+</li>
+<li>
+<p>Set the active subscription:</p>
+<pre><code class="language-ps">select-azurermsubscription -SubscriptionName &quot;&lt;your subscription name&gt;&quot;
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>Let's get <em>all</em> of the log entries for our Resource Group:</p>
+<pre><code class="language-ps">get-azurermlog -ResourceGroup azworkshops_vnets_demo
+</code></pre>
+<p>You should see a couple of entries here, if nothing else, regarding the creation of the Resource Group.</p>
+</li>
+<li>
+<p>Now, let's get <em>all</em> of the log entries where the <em>Status</em> is <strong>succeeded</strong>:</p>
+<pre><code class="language-ps">get-azurermlog -ResourceGroup azworkshops_vnets_demo -Status Succeeded
+</code></pre>
+<p>This is helpful when you want to query any log entries where an operation may have <strong>failed</strong>.</p>
+</li>
+<li>
+<p>You can also specify a date range and a person who performed the action:</p>
+<pre><code class="language-ps">get-azurermlog -ResourceGroup azworkshops_vnets_demo -StartTime (Get-Date).AddDays(-14) -Caller &lt;your email address&gt;
+</code></pre>
+<p>This queries all actions performed in the last two weeks by you.  If you want to specify a right boundary on your time frame, then you can use the <code>EndTime</code> parameter.</p>
+</li>
+<li>
+<p>Finally, to display all of the JSON-formatted details that you saw earlier in the details window, add the <code>DetailedOutput</code> parameter:</p>
+<pre><code class="language-ps">Get-AzureRmLog -ResourceGroup azworkshops_vnets_demo -Status Succeeded -DetailedOutput
+</code></pre>
+</li>
+</ol>
+<h3 id="page_CLI">CLI</h3>
+<ol>
+<li>
+<p>From your prompt connect to Azure:</p>
+<pre><code class="language-bash">azure login
+</code></pre>
+<p>You will need to visit <code>https://aka.ms/devicelogin</code> and enter the code that the CLI gives you.</p>
+</li>
+<li>
+<p>Make sure you are &quot;attached&quot; to the correct subscription. If you only have one subscription, it will automatically be chosen for you.  However, if you have more than one subscription, then the incorrect one may have been chosen by default.</p>
+<ol>
+<li>
+<p>List all subscriptions:</p>
+<pre><code class="language-bash">azure account list | awk -F' {2,}' '{print $2}'
+</code></pre>
+<p>(NOTE: You can simply issue the <code>azure account list</code> command to show all subscriptions <em>and</em> other details. However, in a Linux-based environment, the above command will strip out all of the other information and show the subscription names only.)</p>
+</li>
+<li>
+<p>Set the active subscription:</p>
+<pre><code class="language-bash">azure account set &quot;&lt;your subscription name&gt;&quot;
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>Let's get <em>all</em> of the log entries for our Resource Group:</p>
+<pre><code class="language-bash">azure group log show azworkshops_vnets_demo -a
+</code></pre>
+<p>You should see a couple of entries here, if nothing else, regarding the creation of the Resource Group.</p>
+<p>(<strong>NOTE:</strong> The <code>-a</code> parameter for &quot;all&quot; entries is optional.  However, remember from above that, by default, only the past 6 hours are queried from the log.  So, if you want anything beyond that, you'll need to specify this parameter.)</p>
+</li>
+<li>
+<p>Now, let's get <em>all</em> of the log entries where the <em>Status</em> is <strong>succeeded</strong>.  The CLI doesn't have a querying option, so we'll need to convert the output to JSON then filter that output using <code>jq</code>. The <em>Status</em> is a property of the objects returned from the Azure Insight SDK.  The <em>Status</em> property has a property of its own called <em>Value</em>.  For accessing these properties and filter by them, we'll use 'dot' notation:</p>
+<pre><code class="language-bash">azure group log show azworkshops_vnets_demo -a --json | jq '.[] | select(.status.value == &quot;Succeeded&quot;)'
+</code></pre>
+<p>The command takes all of our returned data and, using <code>jq</code>, converts it to a JSON array of objects, then filters and displays only objects whose property <em>Status.Value</em> equals &quot;Succeeded&quot;.  This is helpful when you want to query any log entries where an operation may have <strong>failed</strong>.</p>
+</li>
+<li>
+<p>You can also filter by date range and a person who performed the action:</p>
+<pre><code class="language-bash">azure group log show azworkshops_vnets_demo -a --json | jq --arg startTime $(date --date=&quot;14 days ago&quot; -Is) '.[] | select(.eventTimestamp &gt; $startTime and .caller == &quot;&lt;your email address&gt;&quot;)'
+</code></pre>
+<p>This queries all actions performed in the last two weeks by you. Looking at this, what we're doing is passing an argument <code>startTime</code> in to <code>jq</code>.  The value of <code>startTime</code> is calculated by running a <em>nested</em> command <code>$(date --date=&quot;14 days ago&quot; -Is)</code>.  That value is then used by <code>jq</code> to compare to the <code>eventTimestamp</code> property of our returned log entries.</p>
+<p>If you want to specify a right boundary on your time frame, then you can create an additional argument and condition.</p>
+<p>(<strong>NOTE:</strong> Mac's do not support the <code>--date</code> or <code>-I</code> parameter.  Instead, your nested command should be <code>$(date -v-14d +%Y-%m-%dT%H:%M:%S%z)</code> where the <code>-v</code> subtracts 14 days and the output is formatted.)</p>
+</li>
+</ol>
+<p>Wow! That was a lot of interaction with our Activity Logs.  However, understanding how to use Activity Logs is <em>extremely</em> beneficial for many reasons.  Those logs can later be audited, piped, or used for reporting in platforms such as Operations Management Suite (OMS).  While this may have seemed like a lot of work, it will get easier over time and it's highly recommended that you continue to practice with the logs and become familiar with them.</p>
+    </div>
+
+            <nav class="hidden-print">
+            <ul class="pager">
+                                    <li class=pager-prev><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Overview.html">Previous</a></li>
+                                                    <li class=pager-next><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Access_Control_(IAM).html">Next</a></li>            </ul>
+        </nav>
+    </article>
+        </div>
+        <div class="col-md-2 hidden-print">
+            <div class="article-links" data-spy="affix" data-offset-top="100">
+                <strong>In this article</strong><ol><li><a href="#page_Overview">Overview</a></li><li><a href="#page_Activity-Log">Activity Log</a></li><li><a href="#page_Exploring-the-Log">Exploring the Log</a></li></ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="footer" class="container-fluid hidden-print">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-1">
+            
+            </div>
+            <div class="col-md-8" style="text-align:right;">
+            This work is licensed under a Creative Commons Attribution 4.0 International License.
+            </div>
+        </div>
+    </div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- JS -->
+    
+    <script src="../../../themes/azure/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script src="../../../themes/azure/js/theme.js"></script>
+
+</body>
+</html>

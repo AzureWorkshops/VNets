@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Access Control (IAM) - Virtual Networks</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="description" content="Azure Workshops" />
+    <meta name="author" content="Joshua Davis">
+    <link rel="icon" href="" type="image/x-icon">
+    
+    <!-- Font -->
+    
+    <!-- CSS -->
+    <link href='../../../themes/azure/css/vs.css' rel='stylesheet' type='text/css'><link href='../../../themes/azure/css/theme.css' rel='stylesheet' type='text/css'><link href='../../../themes/azure/css/theme-white.min.css' rel='stylesheet' type='text/css'>
+</head>
+<body class="">
+
+        <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 col-md-offset-1">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/">Azure Workshops</a>
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <!--
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<div id="content-wrapper" class="container-fluid">
+    <div class="row hidden-print">
+        <div class="col-md-10 col-md-offset-1 breadcrumbs">
+            <a href="../../../index.html">Virtual Networks</a> / <a href="../../../Courseware/Exploring_Azure.html">Courseware</a> / <a href="../../../Courseware/Resource_Groups/Creating_a_Resource_Group.html">Resource Groups</a> / <a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Overview.html">Resource Group Properties</a> / <a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Access_Control_(IAM).html">Access Control (IAM)</a>        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 col-md-offset-1 hidden-print">
+            <div data-spy="affix" data-offset-top="100">
+                <!-- Navigation -->
+                <ul class='Nav'><li class='Nav__item '><a href="../../../Overview.html">Overview</a></li><li class='Nav__item  has-children'><a href="#" class="aj-nav folder"><i class="Nav__arrow">&nbsp;</i>Getting Started</a><ul class='Nav'><li class='Nav__item '><a href="../../../Getting_Started/Requirements.html">Requirements</a></li><li class='Nav__item '><a href="../../../Getting_Started/Office_365_and_Azure_Registration.html">Office 365 and Azure Registration</a></li><li class='Nav__item '><a href="../../../Getting_Started/Setup.html">Setup</a></li></ul></li><li class='Nav__item Nav__item--open has-children'><a href="#" class="aj-nav folder"><i class="Nav__arrow">&nbsp;</i>Courseware</a><ul class='Nav'><li class='Nav__item '><a href="../../../Courseware/Exploring_Azure.html">Exploring Azure</a></li><li class='Nav__item Nav__item--open has-children'><a href="#" class="aj-nav folder"><i class="Nav__arrow">&nbsp;</i>Resource Groups</a><ul class='Nav'><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Creating_a_Resource_Group.html">Creating a Resource Group</a></li><li class='Nav__item Nav__item--open has-children'><a href="#" class="aj-nav folder"><i class="Nav__arrow">&nbsp;</i>Resource Group Properties</a><ul class='Nav'><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Overview.html">Overview</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Activity_Log.html">Activity Log</a></li><li class='Nav__item Nav__item--active'><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Access_Control_(IAM).html">Access Control (IAM)</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Tags.html">Tags</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Resource_Costs.html">Resource Costs</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Deployments.html">Deployments</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Policies.html">Policies</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Automation_Script.html">Automation Script</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Metrics.html">Metrics</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Alert_Rules.html">Alert Rules</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Diagnostic_Logs.html">Diagnostic Logs</a></li></ul></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Resource_Providers.html">Resource Providers</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Adding_Resources.html">Adding Resources</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Managing_Resources.html">Managing Resources</a></li><li class='Nav__item '><a href="../../../Courseware/Resource_Groups/Automation.html">Automation</a></li></ul></li></ul></li></ul>
+                <div class="Links">
+                    
+                    <div class="pdf-link">
+                        <hr />
+                        <a href="../../../pdf/Virtual Networks.pdf"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> <span>Download PDF</span></a>
+                    </div>
+
+                                            <hr/>
+                        <div class="Twitter">
+                                                            <iframe allowtransparency="true" frameborder="0" scrolling="no" style="width:162px; height:20px;" src="https://platform.twitter.com/widgets/follow_button.html?screen_name=azureworkshops&amp;show_count=false"></iframe>
+                                <br />
+                                <br />
+                                                    </div>
+                                    </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <article class="Page">
+    <div class="pageHeader">
+        <h1>Access Control (IAM)</h1>
+                    <div class="date"> Monday, September 25, 2017 5:42 PM</div>
+            </div>
+    <div class="copy">
+        <h2 id="page_Overview">Overview</h2>
+<p>We're briefly going to discuss how to secure our group and it's resources by utilizing Azure's RBAC capabilities.</p>
+<h2 id="page_Access-Control-IAM">Access Control (IAM)</h2>
+<p>The Access Control blade is the management interface enabling you to leverage Azure's Identity and Access Management (IAM). Azure's IAM is used to secure your cloud resources, whether that's a group, as a whole, or individual resources.  Azure's IAM follows the common permissions model of Role Based Access Control (RBAC) which is a method of controlling access to resources based on the roles of the individual users within the enterprise.</p>
+<p>By default, this view shows all explicitly assigned roles/users who have access to this resource.  In our case, this is for our resource group with which we're currently working (e.g. <em>azworkshops_vnets_demo</em>).</p>
+<img src="../../../images/access_control.jpg" class="block"/>
+<p>In the sample image, you'll see that I have two types of users with assigned roles to my resource group.  In the far most right corner, you'll see that these two users were <em>inherited</em> from the subscription level.  Therefore, we know that these two users were added to a policy at the subscription and those roles have been &quot;passed down&quot; to the child resources of the subscription.</p>
+<p>The first user is a <em>Contributor</em> while the second user is an <em>Owner</em>.  A Contributor pretty much has full rights to a resource, but cannot grant/revoke access.  An Owner, on the other hand, can do whatever they please, including management of access.</p>
+<p>Finally, in the second column we see the user's <em>type</em>.  The second user is a standard user account in Active Directory.  The first user, on the other hand, is described as an <em>app</em>.  What that means is that our first user is a registered application, also known as a <em>Service Principal</em>.  This registered application has been assigned a Contributor role to all of the resources within our subscription.  Therefore, the application itself can interact and manage our subscription.</p>
+<h3 id="page_Adding-Users">Adding Users</h3>
+<p>At the top of the blade, you will see <strong>Add</strong>.  Clicking on this will reveal something similar to the following configuration blade.</p>
+<img src="../../../images/access_control_add.jpg" class="block"/>
+<p>By expanding the dropdown for <em>Role</em>, you'll see that there are over 60 different roles available for assignment to users and/or groups.  Each role allows the user(s) to perform specific tasks within Azure and it's resources.  If you are interested in learning about each specific role, checkout the <a href="https://docs.microsoft.com/en-us/azure/active-directory/role-based-access-built-in-roles" class="external">Azure docs</a>.</p>
+<p>You have the ability to decide whether you desire to grant access to an Azure AD user, group, or application; or, you may grant access to a virtual machine.</p>
+<p>If you choose a virtual machine, a few other settings will appear allowing you to choose the virtual machine.  If not, you can simply choose a current user in Active Directory, a Service Principal, a Service Account, or enter someone's email address to give access outside of your Active Directory.</p>
+<h3 id="page_Viewing-Roles">Viewing Roles</h3>
+<p>Azure also provides a way to very easily see what users and/or groups have been assigned to what roles.  Returning to the main <strong>Access Control (IAM)</strong> blade and clicking on <strong>Roles</strong> will display a table of all the roles along with a count of how many users and groups have been assigned to that role.</p>
+<img src="../../../images/access_control_roles.jpg" class="block"/>
+<p>Clicking on any one of these roles will display the assigned users and groups to that particular role.</p>
+<h2 id="page_Powershell-CLI">Powershell/CLI</h2>
+<p>We are can use Powershell and the CLI to work with RBAC, as well.  I won't get into <em>assigning</em> or <em>removing</em> users from roles in this workshop as we don't have any other users.  But, we will experiment with querying our RBAC policies.  Just as we did on the previous page, we will practice using Powershell and the CLI.  Based on your environment and needs, you can choose which tool to use as both of the following sections are the same.</p>
+<h3 id="page_Powershell">Powershell</h3>
+<ol>
+<li>
+<p>From your prompt connect to Azure:</p>
+<pre><code class="language-ps">login-azurermaccount
+</code></pre>
+</li>
+<li>
+<p>Make sure you are &quot;attached&quot; to the correct subscription. If you only have one subscription, it will automatically be chosen for you.  However, if you have more than one subscription, then the incorrect one may have been chosen by default.</p>
+<ol>
+<li>
+<p>List all subscriptions:</p>
+<pre><code class="language-ps">get-azurermsubscription | select -Property SubscriptionName
+</code></pre>
+</li>
+<li>
+<p>Set the active subscription:</p>
+<pre><code class="language-ps">select-azurermsubscription -SubscriptionName &quot;&lt;your subscription name&gt;&quot;
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>Let's list RBAC roles that are available for assignment and inspect the operations to which they grant access:</p>
+<pre><code class="language-ps">get-azurermroledefinition | FT Name, Description
+</code></pre>
+</li>
+<li>
+<p>Let's list the available actions for a given role:</p>
+<pre><code class="language-ps">get-azurermroledefinition &quot;Contributor&quot; | FL Actions, NotActions
+
+(get-azurermroledefinition &quot;Virtual Machine Contributor&quot;).Actions
+</code></pre>
+<p>The first command shows all of the actions and &quot;not-actions&quot; (e.g. allow and deny) for the <em>Contributor</em> role.  The second command shows what actions someone who has the <em>Virtual Machine Contributor</em> is allowed to perform.</p>
+</li>
+<li>
+<p>Show role assignments for the resource group:</p>
+<pre><code class="language-ps">get-azurermroleassignment -ResourceGroupName azworkshops_vnets_demo | FT DisplayName, RoleDefinitionName, Scope
+</code></pre>
+</li>
+<li>
+<p>Show roles assigned to a specific user:</p>
+<pre><code class="language-ps">get-azurermroleassignment -SignInName &lt;your email address&gt; | FT DisplayName, RoleDefinition, Scope
+
+get-azurermroleassignment -SignInName &lt;your email address&gt; -ExpandPrincipalGroups | FT DisplayName, RoleDefinition, Scope
+</code></pre>
+<p>The first command shows all roles assigned to the user <em>explicitly</em>. The second command shows all roles <em>inherited</em> by the user due to their membership in group.</p>
+</li>
+</ol>
+<h3 id="page_CLI">CLI</h3>
+<ol>
+<li>
+<p>From your prompt connect to Azure:</p>
+<pre><code class="language-bash">azure login
+</code></pre>
+<p>You will need to visit <code>https://aka.ms/devicelogin</code> and enter the code that the CLI gives you.</p>
+</li>
+<li>
+<p>Make sure you are &quot;attached&quot; to the correct subscription. If you only have one subscription, it will automatically be chosen for you.  However, if you have more than one subscription, then the incorrect one may have been chosen by default.</p>
+<ol>
+<li>
+<p>List all subscriptions:</p>
+<pre><code class="language-bash">azure account list | awk -F' {2,}' '{print $2}'
+</code></pre>
+<p>(NOTE: You can simply issue the <code>azure account list</code> command to show all subscriptions <em>and</em> other details. However, in a Linux-based environment, the above command will strip out all of the other information and show the subscription names only.)</p>
+</li>
+<li>
+<p>Set the active subscription:</p>
+<pre><code class="language-bash">azure account set &quot;&lt;your subscription name&gt;&quot;
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>Let's list RBAC roles that are available for assignment and inspect the operations to which they grant access:</p>
+<pre><code class="language-bash">azure role list --json | jq '.[] | {&quot;name&quot;:.Name, &quot;description&quot;:.Description}'
+</code></pre>
+</li>
+<li>
+<p>Let's list the available actions for a given role:</p>
+<pre><code class="language-bash">azure role show &quot;contributor&quot; --json | jq '.[] | {&quot;Actions&quot;:.Actions,&quot;NotActions&quot;:.NotActions}'
+
+azure role show &quot;virtual machine contributor&quot; --json | jq '.[] | .Actions'
+</code></pre>
+<p>The first command shows all of the actions and &quot;not-actions&quot; (e.g. allow and deny) for the <em>Contributor</em> role.  The second command shows what actions someone who has the <em>Virtual Machine Contributor</em> is allowed to perform.</p>
+</li>
+<li>
+<p>Show role assignments for the resource group:</p>
+<pre><code class="language-bash">azure role assignment list --resource-group azworkshops_vnets_demo --json | jq '.[] | {&quot;DisplayName&quot;:.properties.aADObject.displayName, &quot;RoleName&quot;:.properties.roleName, &quot;Scope&quot;:.properties.scope}'
+</code></pre>
+</li>
+<li>
+<p>Show roles assigned to a specific user:</p>
+<pre><code class="language-bash">azure role assignment list --signInName &lt;your email address&gt; --json | jq '.[] | {&quot;DisplayName&quot;:.properties.aADObject.displayName,&quot;RoleDefinitionName&quot;:.properties.roleName,&quot;Scope&quot;:.properties.scope}'
+
+azure role assignment list --signInName &lt;your email address&gt; --expandPrincipalGroups --json | jq '.[] | {&quot;DisplayName&quot;:.properties.aADObject.displayName,&quot;RoleDefinitionName&quot;:.properties.roleName,&quot;Scope&quot;:.properties.scope}'
+</code></pre>
+<p>The first command shows all roles assigned to the user <em>explicitly</em>. The second command shows all roles <em>inherited</em> by the user due to their membership in group.</p>
+</li>
+</ol>
+<p>This introduction to RBAC should be sufficient in managing access to your Azure resources.  Again, you can perform a lot more management via Powershell or the CLI, but for the purposes of this workshop, the Azure GUI will work just fine.</p>
+    </div>
+
+            <nav class="hidden-print">
+            <ul class="pager">
+                                    <li class=pager-prev><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Activity_Log.html">Previous</a></li>
+                                                    <li class=pager-next><a href="../../../Courseware/Resource_Groups/Resource_Group_Properties/Tags.html">Next</a></li>            </ul>
+        </nav>
+    </article>
+        </div>
+        <div class="col-md-2 hidden-print">
+            <div class="article-links" data-spy="affix" data-offset-top="100">
+                <strong>In this article</strong><ol><li><a href="#page_Overview">Overview</a></li></ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="footer" class="container-fluid hidden-print">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-1">
+            
+            </div>
+            <div class="col-md-8" style="text-align:right;">
+            This work is licensed under a Creative Commons Attribution 4.0 International License.
+            </div>
+        </div>
+    </div>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- JS -->
+    
+    <script src="../../../themes/azure/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <script src="../../../themes/azure/js/theme.js"></script>
+
+</body>
+</html>
